@@ -37,7 +37,7 @@ public class Employee {
 	public void createPayment(int payid,double payment)
 	{
 		
-	System.out.println("sucssess");
+	
 	}
 
 }
