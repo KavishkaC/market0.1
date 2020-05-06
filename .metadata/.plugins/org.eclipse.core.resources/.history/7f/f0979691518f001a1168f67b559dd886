@@ -113,7 +113,7 @@ public class Employeegui {
 		
 		textField_3 = new JTextField();
 		textField_3.setBackground(Color.DARK_GRAY);
-		textField_3.setBounds(10, 37, 435, 105);
+		textField_3.setBounds(10, 37, 388, 105);
 		frame.getContentPane().add(textField_3);
 		textField_3.setColumns(10);
 		frame.setBounds(100, 100, 725, 478);
