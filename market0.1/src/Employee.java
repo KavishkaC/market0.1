@@ -18,20 +18,22 @@ public class Employee {
 	}
 	
 	
-	public void updateProduct(String update) {
+	public double billItem(String id,int qty) {
+		double total=0.00;
+		double price;
 	try {
-		if (update == "add") {
-			
-			
-		}
+	//price=get price
+		price=12.00;
+		total=price*qty;
 		
-		else if (update == "delete") {
-			
-			
-		}
+		
+		
+	  	
 	}catch(Exception e){
 		System.out.println("Something wrong!please retry.");
 	}
+	
+	return total;
 }
 	
 	public void createPayment(int payid,double payment)

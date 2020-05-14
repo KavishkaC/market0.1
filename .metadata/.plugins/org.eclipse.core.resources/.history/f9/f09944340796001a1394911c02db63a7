@@ -1,0 +1,107 @@
+import java.awt.EventQueue;
+
+
+import java.io.File;
+
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileSystemView;
+
+import javax.swing.JFrame;
+import java.awt.Color;
+import javax.swing.JButton;
+import java.awt.SystemColor;
+import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Reportgui {
+
+	private JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Reportgui window = new Reportgui();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Reportgui() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.DARK_GRAY);
+		frame.setBackground(Color.DARK_GRAY);
+		frame.setBounds(100, 100, 616, 390);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JButton btnNewButton = new JButton("Generate Product Report ");
+		btnNewButton.setBackground(SystemColor.textHighlight);
+		btnNewButton.setBounds(159, 133, 294, 23);
+		frame.getContentPane().add(btnNewButton);
+		
+		textField = new JTextField();
+		textField.setBounds(159, 101, 201, 20);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JButton btnNewButton_1 = new JButton("Browse");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+				jfc.setDialogTitle("Choose a directory to save your file: ");
+				jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+
+				int returnValue = jfc.showSaveDialog(null);
+				if (returnValue == JFileChooser.APPROVE_OPTION) {
+					if (jfc.getSelectedFile().isDirectory()) {
+						String path=jfc.getSelectedFile().getPath();
+						textField.setText(path);
+						Report.generateProductReport(path);
+						
+					}
+				}
+			}
+		});
+		btnNewButton_1.setBounds(364, 100, 89, 23);
+		frame.getContentPane().add(btnNewButton_1);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(159, 185, 201, 20);
+		frame.getContentPane().add(textField_1);
+		textField_1.setColumns(10);
+		
+		JButton btnNewButton_2 = new JButton("Browse");
+		btnNewButton_2.setBounds(364, 184, 89, 23);
+		frame.getContentPane().add(btnNewButton_2);
+		
+		JButton btnNewButton_3 = new JButton("Generate Employee Report");
+		btnNewButton_3.setBounds(159, 216, 294, 23);
+		frame.getContentPane().add(btnNewButton_3);
+		
+
+		
+		
+		
+	}
+
+}
