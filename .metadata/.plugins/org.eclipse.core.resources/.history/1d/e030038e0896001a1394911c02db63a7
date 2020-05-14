@@ -99,35 +99,10 @@ public class Reportgui {
 		textField_1.setColumns(10);
 		
 		JButton btnNewButton_2 = new JButton("Browse");
-		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
-				jfc.setDialogTitle("Choose a directory to save your file: ");
-				jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-
-				int returnValue = jfc.showSaveDialog(null);
-				if (returnValue == JFileChooser.APPROVE_OPTION) {
-					if (jfc.getSelectedFile().isDirectory()) {
-						String path=jfc.getSelectedFile().getPath();
-						textField.setText(path);
-						
-						
-					}
-				}
-				
-				
-			}
-		});
 		btnNewButton_2.setBounds(364, 184, 89, 23);
 		frmReportsmarket.getContentPane().add(btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("Generate Employee Report");
-		btnNewButton_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
 		btnNewButton_3.setBackground(SystemColor.textHighlight);
 		btnNewButton_3.setBounds(159, 216, 294, 23);
 		frmReportsmarket.getContentPane().add(btnNewButton_3);
