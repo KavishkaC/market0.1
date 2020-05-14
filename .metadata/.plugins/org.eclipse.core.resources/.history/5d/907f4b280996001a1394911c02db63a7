@@ -125,7 +125,7 @@ public class Employeegui {
 		
 		textField_3 = new JTextField();
 		textField_3.setBackground(Color.DARK_GRAY);
-		textField_3.setBounds(10, 66, 435, 105);
+		textField_3.setBounds(10, 37, 435, 105);
 		frmEmployeemarket.getContentPane().add(textField_3);
 		textField_3.setColumns(10);
 		
@@ -209,12 +209,6 @@ public class Employeegui {
 		btnNewButton_2.setForeground(SystemColor.desktop);
 		btnNewButton_2.setBounds(466, 311, 222, 23);
 		frmEmployeemarket.getContentPane().add(btnNewButton_2);
-		
-		JLabel lblNewLabel_9 = new JLabel("Hi! Have a good day!");
-		lblNewLabel_9.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_9.setForeground(SystemColor.textHighlight);
-		lblNewLabel_9.setBounds(10, 12, 177, 45);
-		frmEmployeemarket.getContentPane().add(lblNewLabel_9);
 		frmEmployeemarket.setBounds(100, 100, 725, 478);
 		frmEmployeemarket.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
