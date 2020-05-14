@@ -12,9 +12,9 @@ public class Report {
 	public static void generateProductReport(String path) {
 		
 	    try {
-	        File myObj = new File(path+"/"+"ProductReport.txt");
+	        File myObj = new File(path+"/"+"report.txt");
 	        if (myObj.createNewFile()) {
-	        	FileWriter myWriter = new FileWriter(path+"/"+"ProductReport.txt");
+	        	FileWriter myWriter = new FileWriter(path+"/"+"report.txt");
 	            myWriter.write("Product Report\n");
 	            myWriter.write("==============\n");
 	            //parse products sql query here 
@@ -35,9 +35,9 @@ public class Report {
 public static void generateEmployeeReport(String path) {
 		
 	    try {
-	        File myObj = new File(path+"/"+"EmployeeReport.txt");
+	        File myObj = new File(path+"/"+"report.txt");
 	        if (myObj.createNewFile()) {
-	        	FileWriter myWriter = new FileWriter(path+"/"+"EmployeeReport.txt");
+	        	FileWriter myWriter = new FileWriter(path+"/"+"report.txt");
 	            myWriter.write("Employee Report\n");
 	            myWriter.write("==============\n");
 	            //parse products sql query here 

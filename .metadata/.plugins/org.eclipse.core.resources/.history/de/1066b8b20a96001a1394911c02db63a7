@@ -126,7 +126,7 @@ public class Reportgui {
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String path=textField_1.getText();
-				Report.generateEmployeeReport(path);
+				Report.generateProductReport(path);
 				
 				
 			}
