@@ -197,9 +197,7 @@ public class Employeegui {
 				Double cash=Double.parseDouble(textField_2.getText());
 				String balance=Double.toString(cash-tot);
 				lblNewLabel_7.setText(balance);
-				Payment pay = new Payment();
-				String mes=pay.addPayment(tot, cash,(cash-tot));
-				JOptionPane.showMessageDialog(null, mes);
+				
 				}catch(Exception e1) {
 				
 					JOptionPane.showMessageDialog(null, "Enter a valid value");
