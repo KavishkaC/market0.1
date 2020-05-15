@@ -4,14 +4,12 @@ import java.io.FileWriter;
 
 public class Report {
 	
-	protected String res;
-	
 	public Report() {
 		// TODO Auto-generated constructor stub
 	}
 	
 	
-	public String generateProductReport(String path) {
+	public static void generateProductReport(String path) {
 		
 	    try {
 	        File myObj = new File(path+"/"+"ProductReport.txt");
@@ -21,41 +19,39 @@ public class Report {
 	            myWriter.write("==============\n");
 	            //parse products sql query here 
 	            myWriter.close();	
-	            res =("File created: " + path+myObj.getName());
+	          System.out.println("File created: " + myObj.getName());
 	        } else {
-	        	res = "File already exists.";
+	          System.out.println("File already exists.");
 	        }
 	      } catch (IOException e) {
-	    	  res = "An error occurred.";
+	        System.out.println("An error occurred.");
 	        e.printStackTrace();
 	      }
-	    return res;
 	    
 	    
 		
 	}
 	
-public String generateEmployeeReport(String path) {
+public static void generateEmployeeReport(String path) {
 		
 	    try {
 	        File myObj = new File(path+"/"+"EmployeeReport.txt");
-	       
 	        if (myObj.createNewFile()) {
 	        	FileWriter myWriter = new FileWriter(path+"/"+"EmployeeReport.txt");
 	            myWriter.write("Employee Report\n");
 	            myWriter.write("==============\n");
 	            //parse products sql query here 
 	            myWriter.close();	
-	           res =("File created: " +path+myObj.getName());
+	          System.out.println("File created: " + myObj.getName());
 	        } else {
-	          res = "File already exists.";
+	          System.out.println("File already exists.");
 	        }
 	      } catch (IOException e) {
-	    	   res = "An error occurred.";
+	        System.out.println("An error occurred.");
 	        e.printStackTrace();
 	      }
 	    
-	    return res;
+	    
 		
 	}
 	

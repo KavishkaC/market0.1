@@ -21,7 +21,7 @@ public class Report {
 	            myWriter.write("==============\n");
 	            //parse products sql query here 
 	            myWriter.close();	
-	            res =("File created: " + path+myObj.getName());
+	            res =("File created: " + myObj.getName());
 	        } else {
 	        	res = "File already exists.";
 	        }
@@ -46,7 +46,7 @@ public String generateEmployeeReport(String path) {
 	            myWriter.write("==============\n");
 	            //parse products sql query here 
 	            myWriter.close();	
-	           res =("File created: " +path+myObj.getName());
+	           res =("File created: " + myObj.getName());
 	        } else {
 	          res = "File already exists.";
 	        }

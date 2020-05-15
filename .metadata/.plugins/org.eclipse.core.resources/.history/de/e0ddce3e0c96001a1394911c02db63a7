@@ -7,8 +7,6 @@ import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileSystemView;
 
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-
 import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.SystemColor;
@@ -63,7 +61,7 @@ public class Reportgui {
 				String path=textField.getText();
 				Report report = new Report();
 				String res= report.generateProductReport(path);
-				JOptionPane.showMessageDialog(null, res);
+				
 			}
 		});
 		btnNewButton.setBackground(SystemColor.textHighlight);
